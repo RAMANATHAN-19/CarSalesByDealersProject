@@ -99,7 +99,7 @@ http://127.0.0.1:8000/api/
 
 ### Customer API
 
-- **Endpoint:** `/api/customer/`
+- **Endpoint:** `/api/customers/`
 - **Description:** Manage customer details.
 - **Methods:** GET, POST, PUT, DELETE
 
