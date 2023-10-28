@@ -25,7 +25,7 @@ Before you start, ensure you have the following prerequisites:
 1. Clone the repository:
 
    ```bash
-git clone https://github.com/your-username/car-sales-by-dealers.git
+     git clone https://github.com/your-username/car-sales-by-dealers.git
 
 ## Deployment
 
