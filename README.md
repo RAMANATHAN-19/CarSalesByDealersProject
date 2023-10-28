@@ -1,106 +1,85 @@
-# CarSalesByDealersProject
-Python Django Project for Car Sales by Dealers
+# Car Sales By Dealers
 
-Car Sales and Service System is a web-based application developed using Django, designed to manage car sales and api operations.
-
-## Table of Contents
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
+Car Sales By Dealers is a Django-based web application and API framework designed for managing car sales, customer details, dealer information, and car inventory. This project provides CRUD (Create, Read, Update, Delete) operations for car sales, allowing dealers to manage their inventory and sales transactions.
 
 ## Features
 
 - **User Authentication**: Secure user authentication and management system.
-- **Product Management**: Add and manage car products, with real-time updates.
-- **Sales Management**: Record and manage sales transactions.
-- **Dynamic Dashboard**: Provides an overview of key statistics and actions for users.
-- **Responsive Design**: The web interface is responsive for various screen sizes.
-- **Customization**: Easily customize the application to your specific needs.
+- **Car Management**: Add, edit, and delete car details, including make, model, year, and price.
+- **Customer Management**: Record and manage customer information, including names, email addresses, and phone numbers.
+- **Dealer Management**: Store and update dealer information, including names and locations.
+- **Sales Transactions**: Create and manage sales transactions with details such as the car sold, the customer, and the dealer involved.
+- **API Framework**: Provides API endpoints for interacting with the system programmatically.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Python 3.8.10
-- Django 4.2.6
+Before you start, ensure you have the following prerequisites:
+
+- Python 3.8+
+- Django 4.2+
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/RAMANATHAN-19/CarSalesByDealers.git
+   git clone https://github.com/your-username/car-sales-by-dealers.git
 
 
 ## Deployment
 
 To deploy this project run
 
-```Create a virtual environment (optional but recommended):
+1. Change your working directory:
 
-python3 -m venv venv
-
-source venv/bin/activate
-
-Install the required packages:
-
-pip install -r requirements.txt
-
-Apply the database migrations:
-
-python manage.py migrate
-
-Create a superuser account for initial access to the admin panel:
-
-python manage.py createsuperuser
-
-OR use this
-USERNAME : admin
-PASSOWRD : admin123
-
-Collect the static files:
-
-python manage.py collectstatic
-
-Start the development server:
-
-python manage.py runserver
-
-You should now be able to access the application by opening your web browser and navigating to http://localhost:8000/.
-
-
+```bash
+  cd car-sales-by-dealers
 ```
 
+2.Create a virtual environment (optional but recommended):
+```bash
+  python -m venv venv
+  source venv/bin/activate
+```
+3.Apply database migrations:
+```bash
+  python manage.py makemigrations
+  python manage.py migrate
+```
 
-## Acknowledgements
+4.Create a superuser account for the admin panel:
+```bash
+  python manage.py createsuperuser
+```
+5.Collect static files:
+```bash
+  python manage.py collectstatic
+```
+6.Start the development server:
+```bash
+  python manage.py runserver
+```
 
- Usage
+You can now access the application at http://localhost:8000/ and the admin panel at http://localhost:8000/admin/. Log in with the superuser account you created.
+## Usage
+
 Access the admin panel by navigating to http://localhost:8000/admin/ and log in with the superuser account.
+
 To access the user interface, visit http://localhost:8000/.
+
 Configuration
-The project's settings can be configured in the settings.py file, including database settings, static and media file settings, and more.
+You can configure various settings for this project by modifying the settings.py file. Some of the settings you can customize include:
 
-Contributing
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+Database settings: Configure your database connection and settings.
 
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and commit them.
-Push your changes to your fork.
-Submit a pull request to the main repository.
+Static and media file settings: Adjust the paths and locations for static and media files.
 
+And more: Explore other settings in the settings.py file to tailor the project to your specific requirements.
 ## Running Tests
 
 To run tests, run the following command
-
-  TO RUN THE UI
-```
-  http://127.0.0.1:8000/
-```
 
 TO RUN THE DJANGO ADMIN
 ```
@@ -109,25 +88,32 @@ http://127.0.0.1:8000/admin/
 
   TO RUN THE API
 ```
-http://127.0.0.1:8000/api/v1/
+http://127.0.0.1:8000/api/
 ```
 ## API Endpoints:
 
-### Customer Details API
+### Car API
 
-- **Endpoint:** `/api/customer_details/`
-- **Description:** Get a list of customer details.
-- **Methods:** GET, POST
+- **Endpoint:** `/api/cars/`
+- **Description:** Get a list of cars and create new car entries.
+- **Methods:** GET, POST, PUT, DELETE
 
-### Products API
+### Customer API
 
-- **Endpoint:** `/api/products/`
-- **Description:** Get a list of products.
-- **Methods:** GET, POST
+- **Endpoint:** `/api/customer/`
+- **Description:** Manage customer details.
+- **Methods:** GET, POST, PUT, DELETE
+
+### Dealer API
+
+- **Endpoint:** `/api/dealers/`
+- **Description:** Get a list of dealers information..
+- **Methods:** GET, POST, PUT, DELETE
 
 ### Sales API
 
 - **Endpoint:** `/api/sales/`
-- **Description:** Get a list of sales records.
-- **Methods:** GET, POST
+- **Description:** View, create, and manage sales transactions.
+- **Methods:** GET, POST, PUT, DELETE
+
 
