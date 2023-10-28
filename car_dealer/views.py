@@ -15,7 +15,6 @@ class CarViewSet(viewsets.ModelViewSet):
     # GET action
     @action(detail=False, methods=['get'])
     def custom_action(self, request):
-        # Implement your logic here
         cars = Car.objects.all()
         serializer = CarSerializer(cars, many=True)
         return Response(serializer.data)
